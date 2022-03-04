@@ -1,4 +1,6 @@
-[num,txt,raw] = xlsread('코로나 확진율.xlsx'); % 주가 파일 읽기
+clear
+
+[num,txt,raw] = xlsread('코로나 확진율.xlsx'); % 파일 읽기
 
 date_nv = num(:,1); % date
 date_strnv = datenum(num2str(date_nv),'yyyymmdd'); % 형식에 맞게 변환
@@ -44,6 +46,3 @@ grid minor
 xlabel('날짜 [년-월-일]'), ylabel('확진자 수')
 datetick( 'x','yy-mm-dd')
 
-X_V
-
-%Y_V
